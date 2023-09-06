@@ -46,8 +46,6 @@ endforeach;
 $yearsFirstRegistration = array_unique($yearsFirstRegistration);
 sort($yearsFirstRegistration);
 
-/* ------------------------------------------------------------------------------------------------------------------ */
-$titleVehicle = titleVehicle($vehicle->getMake(), $vehicle->getModel(), $vehicle->getEngineCapacity(), $vehicle->getPower());
 ?>
 
 <!-- List of vehicles -->
@@ -162,12 +160,12 @@ $titleVehicle = titleVehicle($vehicle->getMake(), $vehicle->getModel(), $vehicle
           <div class="title">
             <div class="target">
               <h4>
-                <?= $titleVehicle ?>
+                <?= titleVehicle($vehicle->getMake(), $vehicle->getModel(), $vehicle->getEngineCapacity(), $vehicle->getPower()) ?>
               </h4>
             </div>
             <div class="tooltip">
               <h4>
-                <?= $titleVehicle ?>
+                <?= titleVehicle($vehicle->getMake(), $vehicle->getModel(), $vehicle->getEngineCapacity(), $vehicle->getPower()) ?>
               </h4>
             </div>
           </div>
